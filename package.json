@@ -1,10 +1,10 @@
 {
   "name": "react-cards",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A react card",
   "license": "MIT",
   "readmeFileName": "README.md",
-  "main": "./index.js",
+  "main": "./src/app.min.js",
   "author": {
     "name": "Halfeld",
     "email": "igorelmerico@hotmail.com"
@@ -18,8 +18,12 @@
     "react-component",
     "card"
   ],
-  "devDependencies": {
+  "dependencies": {
     "aphrodite": "^0.3.3",
+    "react": "^15.0.1",
+    "react-dom": "^15.0.1"
+  },
+  "devDependencies": {
     "babel-loader": "^6.2.0",
     "babel-plugin-add-module-exports": "^0.1.2",
     "babel-plugin-react-html-attrs": "^2.0.0",
@@ -28,8 +32,6 @@
     "babel-preset-es2015": "^6.3.13",
     "babel-preset-react": "^6.3.13",
     "babel-preset-stage-0": "^6.3.13",
-    "react": "^15.0.1",
-    "react-dom": "^15.0.1",
     "webpack": "^1.12.9",
     "webpack-dev-server": "^1.14.1"
   }

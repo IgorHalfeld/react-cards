@@ -1,4 +1,6 @@
 node_modules/
-src/app.min.js
+src/components/article.js
+src/components/header.js
+src/app.js
 src/index.html
 webpack.config.js
