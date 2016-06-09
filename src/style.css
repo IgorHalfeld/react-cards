@@ -1,0 +1,29 @@
+
+* {margin: 0; padding: 0; box-sizing: border-box;}
+
+
+body {
+  background-color: #444;
+}
+
+.title {
+  text-align: center;
+  font-size: 60px;
+  color: purple;
+  padding: 30px;
+  background-color: #f4f4f4;
+}
+
+#App {
+  width: 100%;
+}
+
+#App > .container {
+  margin-top: 20px;
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+}

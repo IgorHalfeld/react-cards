@@ -15,12 +15,14 @@ const styles = StyleSheet.create({
     maxWidth: '300px',
     height: 'auto',
     backgroundColor: '#f4f4f4',
-    transition: 'box-shadow .3s ease'
+    transition: 'all .3s ease'
+    // transition: 'box-shadow .3s ease'
   },
 
   hover: {
     ':hover': {
-      boxShadow: '0px 0px 12px #ccc'
+      boxShadow: '0px 0px 2px #ccc',
+      transform: 'scale(1.01,1.01)'
     }
   }
 });
