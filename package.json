@@ -1,13 +1,17 @@
 {
   "name": "react-cards",
-  "version": "0.1.3",
+  "version": "0.1.6",
   "description": "A react card",
   "license": "MIT",
   "readmeFileName": "README.md",
-  "main": "./src/app.min.js",
+  "jsnext:main": "src/app.js",
   "author": {
     "name": "Halfeld",
     "email": "igorelmerico@hotmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Halfeld/react-cards.git"
   },
   "scripts": {
     "start": "./node_modules/.bin/webpack-dev-server --content-base src --inline --hot"

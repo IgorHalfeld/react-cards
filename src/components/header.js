@@ -20,15 +20,15 @@ const styles = StyleSheet.create({
     zIndex: '2'
   },
 
-
-
   'card__header--image': {
     position: 'absolute',
     backgroundSize: 'cover',
+    backgroundPosition: 'center',
     width: '100%',
     height: '300px',
     zIndex: '0'
   },
+
 
   title: {
     margin: '0',

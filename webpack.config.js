@@ -4,7 +4,7 @@ var webpack = require('webpack');
 module.exports = {
   context: __dirname,
   devtool: debug ? "inline-sourcemap" : null,
-  entry: "./src/app.js",
+  entry: "./index.js",
   module: {
     loaders: [
       {

@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
 
   hover: {
     ':hover': {
-      boxShadow: '0px 0px 10px #ccc'
+      boxShadow: '0px 0px 12px #ccc'
     }
   }
 });
