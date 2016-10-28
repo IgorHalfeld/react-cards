@@ -14,7 +14,8 @@
     "url": "git+https://github.com/Halfeld/react-cards.git"
   },
   "scripts": {
-    "start": "./node_modules/.bin/webpack-dev-server --content-base src --inline --hot"
+    "start": "react-scripts start",                                   
+    "build": "react-scripts build"
   },
   "keywords": [
     "react",

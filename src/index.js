@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDom from 'react-dom';
-import Card from './src/app.js';
+import Card from './app.js';
 
 
 class App extends React.Component {
