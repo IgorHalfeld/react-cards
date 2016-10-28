@@ -28,22 +28,6 @@ const styles = StyleSheet.create({
 
 class Card extends React.Component {
 
-  static defaultProps = {
-      src: 'https://avatars.githubusercontent.com/u/9022134?v=3',
-      titleSmallWord: 'Hello',
-      titleBigWord: 'World',
-      color: 'purple',
-      text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
-  };
-
-  static propTypes = {
-    src: React.PropTypes.string,
-    titleSmallWord: React.PropTypes.string,
-    titleBigWord: React.PropTypes.string,
-    color: React.PropTypes.string,
-    text: React.PropTypes.string
-  };
-
   render() {
     return (
       <main className={css(styles.card, styles.hover)}>
@@ -59,5 +43,21 @@ class Card extends React.Component {
     );
   }
 }
+
+Card.defaultProps = {
+    src: 'https://avatars.githubusercontent.com/u/9022134?v=3',
+    titleSmallWord: 'Hello',
+    titleBigWord: 'World',
+    color: 'purple',
+    text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+};
+
+Card.propTypes = {
+  src: React.PropTypes.string,
+  titleSmallWord: React.PropTypes.string,
+  titleBigWord: React.PropTypes.string,
+  color: React.PropTypes.string,
+  text: React.PropTypes.string
+};
 
 export default Card;
