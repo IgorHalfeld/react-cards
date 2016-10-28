@@ -27,8 +27,9 @@ class App extends React.Component {
         src='path/to/img'
         titleSmallWord='Small word'
         titleBigWord='Big word'
-        text='Text'
-        color='Overlay color' />
+        color='Overlay color'>
+        Whatever text Here
+      </Card>
     );
   }
 }

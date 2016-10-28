@@ -1,10 +1,9 @@
 {
   "name": "react-cards",
-  "version": "0.1.7",
+  "version": "0.2.1",
   "description": "A react card",
   "license": "MIT",
   "readmeFileName": "README.md",
-  "jsnext:main": "src/app.js",
   "author": {
     "name": "Halfeld",
     "email": "igorelmerico@hotmail.com"
@@ -14,7 +13,7 @@
     "url": "git+https://github.com/Halfeld/react-cards.git"
   },
   "scripts": {
-    "start": "react-scripts start",                                   
+    "start": "react-scripts start",
     "build": "react-scripts build"
   },
   "keywords": [

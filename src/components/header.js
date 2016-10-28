@@ -76,7 +76,7 @@ class Header extends React.Component {
       <header className={css(styles.card__header)}>
         <span className={css(styles.tooltip)}></span>
         <div className={css(color.overlay)}></div>
-        <img className={css(styles['card__header--image'])} src={this.props.src} />
+        <img alt={`${this.props.titleSmallWord} ${this.props.titleBigWord}`} className={css(styles['card__header--image'])} src={this.props.src} />
         <h1 className={css(styles.title)}>
           <small className={css(styles.small)}>{this.props.titleSmallWord},</small>
           {this.props.titleBigWord}

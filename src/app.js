@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDom from 'react-dom';
 import { StyleSheet, css } from 'aphrodite';
 import Header from './components/header';
 import Article from './components/article';
@@ -30,7 +29,7 @@ const styles = StyleSheet.create({
 class Card extends React.Component {
 
   static defaultProps = {
-      src: 'http://blog.mywork.art.br/assets/img/author/halfeld-igor-luiz.jpg',
+      src: 'https://avatars.githubusercontent.com/u/9022134?v=3',
       titleSmallWord: 'Hello',
       titleBigWord: 'World',
       color: 'purple',
@@ -55,7 +54,7 @@ class Card extends React.Component {
           color={this.props.color} />
 
         <Article
-          text={this.props.text} />
+          text={this.props.children} />
       </main>
     );
   }
