@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import { StyleSheet, css } from 'aphrodite';
 
 const styles = StyleSheet.create({
@@ -28,7 +28,6 @@ const styles = StyleSheet.create({
     height: '300px',
     zIndex: '0'
   },
-
 
   title: {
     margin: '0',
@@ -60,30 +59,44 @@ const styles = StyleSheet.create({
 })
 
 
-class Header extends React.Component {
-  render() {
-    const color = StyleSheet.create({
-      overlay: {
-        position: 'absolute',
-        width: '100%',
-        height: '300px',
-        backgroundColor: this.props.color,
-        opacity: '.5',
-        zIndex: '1'
-      }
-    });
-    return (
-      <header className={css(styles.card__header)}>
-        <span className={css(styles.tooltip)}></span>
-        <div className={css(color.overlay)}></div>
-        <img alt={`${this.props.titleSmallWord} ${this.props.titleBigWord}`} className={css(styles['card__header--image'])} src={this.props.src} />
-        <h1 className={css(styles.title)}>
-          <small className={css(styles.small)}>{this.props.titleSmallWord},</small>
-          {this.props.titleBigWord}
-        </h1>
-      </header>
-    );
-  }
+
+const Header = ({ titleBigWord, titleSmallWord, src, color }) => {
+  const background = StyleSheet.create({
+    overlay: {
+      position: 'absolute',
+      width: '100%',
+      height: '300px',
+      backgroundColor: color,
+      opacity: '.5',
+      zIndex: '1'
+    }
+  })
+
+  return (
+    <header className={css(styles.card__header)}>
+      <span className={css(styles.tooltip)} />
+
+      <div className={css(background.overlay)} />
+
+      <img
+        alt={`${titleSmallWord} ${titleBigWord}`}
+        className={css(styles['card__header--image'])}
+        src={src}
+      />
+
+      <h1 className={css(styles.title)}>
+        <small className={css(styles.small)}>{titleSmallWord},</small>
+        {titleBigWord}
+      </h1>
+    </header>
+  )
+}
+
+Header.propTypes = {
+  titleBigWord: PropTypes.string.isRequired,
+  titleSmallWord: PropTypes.string.isRequired,
+  src: PropTypes.string.isRequired,
+  color: PropTypes.string.isRequired
 }
 
 export default Header;
