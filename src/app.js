@@ -1,11 +1,9 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import { StyleSheet, css } from 'aphrodite';
 import Header from './components/header';
 import Article from './components/article';
 
-
 const styles = StyleSheet.create({
-
   card: {
     margin: '0',
     padding: '0',
@@ -15,7 +13,6 @@ const styles = StyleSheet.create({
     height: 'auto',
     backgroundColor: '#f4f4f4',
     transition: 'all .3s ease'
-    // transition: 'box-shadow .3s ease'
   },
 
   hover: {
@@ -26,38 +23,34 @@ const styles = StyleSheet.create({
   }
 });
 
-class Card extends React.Component {
+const Card = ({ src, titleSmallWord, titleBigWord, color, text, children}) => (
+  <div className={css(styles.card, styles.hover)}>
+    <Header
+      src={src}
+      titleSmallWord={titleSmallWord}
+      titleBigWord={titleBigWord}
+      color={color} />
 
-  render() {
-    return (
-      <main className={css(styles.card, styles.hover)}>
-        <Header
-          src={this.props.src}
-          titleSmallWord={this.props.titleSmallWord}
-          titleBigWord={this.props.titleBigWord}
-          color={this.props.color} />
-
-        <Article
-          text={this.props.children} />
-      </main>
-    );
-  }
-}
+    <Article
+      text={children} />
+  </div>
+)
 
 Card.defaultProps = {
-    src: 'https://avatars.githubusercontent.com/u/9022134?v=3',
-    titleSmallWord: 'Hello',
-    titleBigWord: 'World',
-    color: 'purple',
-    text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+  src: 'https://avatars.githubusercontent.com/u/9022134?v=3',
+  titleSmallWord: 'Hello',
+  titleBigWord: 'World',
+  color: 'purple',
+  text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
 };
 
 Card.propTypes = {
-  src: React.PropTypes.string,
-  titleSmallWord: React.PropTypes.string,
-  titleBigWord: React.PropTypes.string,
-  color: React.PropTypes.string,
-  text: React.PropTypes.string
+  src: PropTypes.string,
+  titleSmallWord: PropTypes.string,
+  titleBigWord: PropTypes.string,
+  color: PropTypes.string,
+  text: PropTypes.string,
+  children: PropTypes.node.isRequired
 };
 
 export default Card;

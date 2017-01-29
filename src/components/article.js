@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import { StyleSheet, css } from 'aphrodite';
 
 const styles = StyleSheet.create({
@@ -12,15 +12,14 @@ const styles = StyleSheet.create({
   }
 })
 
+const Article = ({ text }) => (
+  <article className={css(styles.card__article)}>
+    <p>{text}</p>
+  </article>
+)
 
-class Article extends React.Component {
-  render() {
-    return (
-      <article className={css(styles.card__article)}>
-        <p>{this.props.text}</p>
-      </article>
-    );
-  }
+Article.propTypes = {
+  text: PropTypes.string.isRequired
 }
 
 export default Article;
