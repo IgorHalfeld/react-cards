@@ -12,16 +12,11 @@ const styles = StyleSheet.create({
   }
 })
 
-
-class Article extends React.Component {
-  render() {
-    return (
-      <article className={css(styles.card__article)}>
-        <p>{this.props.text}</p>
-      </article>
-    );
-  }
-}
+const Article = ({ text }) => (
+  <article className={css(styles.card__article)}>
+    <p>{text}</p>
+  </article>
+)
 
 Article.propTypes = {
   text: PropTypes.string.isRequired
