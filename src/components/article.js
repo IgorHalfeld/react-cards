@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import { StyleSheet, css } from 'aphrodite';
 
 const styles = StyleSheet.create({
@@ -21,6 +21,10 @@ class Article extends React.Component {
       </article>
     );
   }
+}
+
+Article.propTypes = {
+  text: PropTypes.string.isRequired
 }
 
 export default Article;

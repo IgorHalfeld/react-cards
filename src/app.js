@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import { StyleSheet, css } from 'aphrodite';
 import Header from './components/header';
 import Article from './components/article';
@@ -53,11 +53,11 @@ Card.defaultProps = {
 };
 
 Card.propTypes = {
-  src: React.PropTypes.string,
-  titleSmallWord: React.PropTypes.string,
-  titleBigWord: React.PropTypes.string,
-  color: React.PropTypes.string,
-  text: React.PropTypes.string
+  src: PropTypes.string,
+  titleSmallWord: PropTypes.string,
+  titleBigWord: PropTypes.string,
+  color: PropTypes.string,
+  text: PropTypes.string
 };
 
 export default Card;
